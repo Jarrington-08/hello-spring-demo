@@ -5,15 +5,15 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class HelloController {
-    //handle request at path http://localhost:8080/hello
+//    handle request at path http://localhost:8080/helloHome
 
-//    @GetMapping("hello")
-//    @ResponseBody
-//    public String hello(){
-//        return "Hello, Spring!";
-//    }
+    @GetMapping("helloHome")
+    @ResponseBody
+    public String hello(){
+        return "Hello, Spring!";
+    }
 
-    //handle request at path //http://localhost:8080/goodbye
+//    handle request at path //http://localhost:8080/goodbye
     @GetMapping("goodbye")
     @ResponseBody
     public String goodbye(){
@@ -35,16 +35,8 @@ public class HelloController {
     }
 
     @GetMapping("form")
-    @ResponseBody
     public String helloForm() {
-        return "<html>" +
-                "<body>" +
-                "<form action = 'hello' method = 'post'>" + // submit a request to /hello
-                "<input type = 'text' name = 'name' >" +
-                "<input type = 'submit' value = 'Greet Me!' >" +
-                "</form>" +
-                "</body>" +
-                "</html>";
+        return "form";
     }
 
 }
